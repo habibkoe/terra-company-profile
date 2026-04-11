@@ -12,7 +12,7 @@ export interface NavItem {
 
 // ─── Projects / Portfolio ─────────────────────────────────────────────────────
 
-export type ProjectCategory = 'Farming' | 'Hotel' | 'Education' | 'Financial' | 'Other';
+export type ProjectCategory = 'Farming' | 'Hotel' | 'Education' | 'Financial' | 'Government' | 'E-Commerce' | 'Construction' | 'Other';
 
 export interface Project {
 	id: number;

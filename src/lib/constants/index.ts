@@ -123,55 +123,55 @@ export const PROJECTS_DATA: Project[] = [
 	// Education
 	{
 		id: 5,
-		title: 'EduConnect Platform',
+		title: 'E-Pfr',
 		description:
-			'Sistem informasi sekolah lengkap dengan modul e-learning, absensi digital, dan portal komunikasi orang tua-guru.',
-		category: 'Education',
+			'Management Financial Record System',
+		category: 'Financial',
 		imageUrl: '/images/projects/educonnect.jpg',
-		tags: ['LMS', 'Absensi', 'SvelteKit', 'PostgreSQL'],
+		tags: ['Financial', 'Record', 'SvelteKit', 'PostgreSQL'],
 		year: 2024,
-		client: 'Yayasan Pendidikan Nusantara'
+		client: 'Legacy FA Pte Ltd'
 	},
 	{
 		id: 6,
-		title: 'SkillPath LMS',
+		title: 'Absensi Siswa',
 		description:
-			'Platform e-learning adaptif dengan AI-powered learning path untuk pelatihan karyawan korporat skala enterprise.',
+			'Sistem informasi sekolah lengkap dengan modul e-learning, absensi digital, dan portal komunikasi orang tua-guru.',
 		category: 'Education',
 		imageUrl: '/images/projects/skillpath.jpg',
-		tags: ['E-Learning', 'AI', 'Corporate Training'],
-		year: 2023,
-		client: 'Multinational Corp'
+		tags: ['E-Learning', 'Absensi', 'SvelteKit', 'PostgreSQL'],
+		year: 2024,
+		client: 'SMPN 3 Tanjung'
 	},
 	// Financial
 	{
 		id: 7,
-		title: 'PayNow Gateway',
+		title: 'Cake and Catering Perian',
 		description:
-			'Payment gateway terintegrasi multi-channel (QRIS, virtual account, kartu kredit) dengan dashboard merchant real-time.',
-		category: 'Financial',
+			'Sistem informasi toko kue dan catering dengan fitur pemesanan online, pembayaran digital, dan manajemen inventaris.',
+		category: 'E-Commerce',
 		imageUrl: '/images/projects/paynow.jpg',
-		tags: ['Payment Gateway', 'QRIS', 'API', 'Node.js'],
+		tags: ['E-Commerce', 'QRIS', 'API', 'Node.js', 'Laravel', 'SvelteKit'],
 		year: 2024,
-		client: 'Fintech Startup'
+		client: 'Cake and Catering Perian'
 	},
 	{
 		id: 8,
-		title: 'Treasury Management System',
+		title: 'AwasiBoyo',
 		description:
-			'Sistem manajemen keuangan dan likuiditas untuk koperasi dengan fitur laporan otomatis dan audit trail komprehensif.',
-		category: 'Financial',
+			'Sistem managemen pengawasan koperasi pemerintah kota surabaya',
+		category: 'Government',
 		imageUrl: '/images/projects/treasury.jpg',
-		tags: ['Treasury', 'Koperasi', 'Laravel', 'Chart.js'],
+		tags: ['Government', 'Koperasi', 'Laravel', 'Chart.js'],
 		year: 2023,
-		client: 'Koperasi Sejahtera Bersama'
+		client: 'Pemerintah Kota Surabaya'
 	}
 ];
 
 // ─── Contact Information ──────────────────────────────────────────────────────
 
 export const CONTACT_INFO: ContactInfo = {
-	email: 'hello@terraincognitatechnology.com',
-	phone: '+62 812 3456 7890',
-	address: 'Jl. Innovation Hub No. 42, Semarang, Jawa Tengah 50111'
+	email: 'perianinnovation@gmail.com',
+	phone: '+62 895 0249 3848',
+	address: 'Jl. Montong Gading - Perian, Pesanggrahan, Kec. Montong Gading, Kabupaten Lombok Timur, Nusa Tenggara Barat'
 };
