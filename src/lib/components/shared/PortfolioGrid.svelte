@@ -8,7 +8,7 @@
 
 	type FilterOption = 'All' | ProjectCategory;
 
-	const FILTER_OPTIONS: FilterOption[] = ['All', 'Farming', 'Hotel', 'Education', 'Financial'];
+	const FILTER_OPTIONS: FilterOption[] = ['All', 'Farming', 'Hotel', 'Education', 'Financial', 'Government', 'E-Commerce', 'Construction'];
 
 	let activeFilter = $state<FilterOption>('All');
 
@@ -21,6 +21,9 @@
 		Hotel: 'cyan',
 		Education: 'purple',
 		Financial: 'yellow',
+		Government: 'cyan',
+		'E-Commerce': 'green',
+		Construction: 'yellow',
 		Other: 'cyan'
 	};
 
@@ -29,6 +32,9 @@
 		Hotel: '🏨 Hotel',
 		Education: '🎓 Education',
 		Financial: '💰 Financial',
+		Government: '🏛️ Government',
+		'E-Commerce': '🛒 E-Commerce',
+		Construction: '🏗️ Construction',
 		Other: '✨ Other'
 	};
 
@@ -38,6 +44,9 @@
 		Hotel: 'from-cyan-glow/30 to-transparent',
 		Education: 'from-purple-500/30 to-transparent',
 		Financial: 'from-yellow-500/30 to-transparent',
+		Government: 'from-blue-500/30 to-transparent',
+		'E-Commerce': 'from-pink-500/30 to-transparent',
+		Construction: 'from-orange-500/30 to-transparent',
 		Other: 'from-cyan-glow/20 to-transparent'
 	};
 </script>
@@ -89,7 +98,7 @@
 					<div class="relative h-44 bg-space-700 overflow-hidden">
 						<div class="absolute inset-0 flex items-center justify-center">
 							<div class="text-5xl opacity-20 select-none">
-								{project.category === 'Farming' ? '🌾' : project.category === 'Hotel' ? '🏨' : project.category === 'Education' ? '📚' : '💳'}
+								{project.category === 'Farming' ? '🌾' : project.category === 'Hotel' ? '🏨' : project.category === 'Education' ? '📚' : project.category === 'Government' ? '🏛️' : project.category === 'E-Commerce' ? '🛒' : project.category === 'Construction' ? '🏗️' : '💳'}
 							</div>
 						</div>
 						<!-- Shimmer overlay on hover -->
