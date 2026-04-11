@@ -47,7 +47,7 @@
 
 		<!-- Headline -->
 		<h1
-			class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight mb-6 animate-slide-up"
+			class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black !leading-[1.2] tracking-tight mb-6 animate-slide-up"
 		>
 			<span class="block text-white">Terra</span>
 			<span class="block gradient-text glow-text">Incognita</span>
