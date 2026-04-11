@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { NAV_ITEMS } from '$lib/constants';
-	import { Menu, X, Zap } from 'lucide-svelte';
+	import { Menu, X } from 'lucide-svelte';
+	import logo from '$lib/assets/logo.png';
 
 	let isMenuOpen = $state(false);
 	let isScrolled = $state(false);
@@ -32,10 +33,10 @@
 			<!-- Logo -->
 			<a href="#home" class="flex items-center gap-2.5 group" onclick={() => handleNavClick('#home')}>
 				<div
-					class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-glow to-neon-green flex items-center justify-center shadow-[0_0_15px_rgba(0,212,255,0.4)] group-hover:shadow-[0_0_25px_rgba(0,212,255,0.6)] transition-all duration-300"
-				>
-					<Zap size={18} class="text-space-900" />
-				</div>
+				class="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center shadow-[0_0_15px_rgba(0,212,255,0.4)] group-hover:shadow-[0_0_25px_rgba(0,212,255,0.6)] transition-all duration-300"
+			>
+				<img src={logo} alt="Terra Incognita Technology Logo" class="w-full h-full object-cover" />
+			</div>
 				<div class="hidden sm:block">
 					<span class="font-bold text-lg text-white leading-none">Terra Incognita</span>
 					<span class="block text-[10px] text-cyan-glow font-mono tracking-[0.2em] uppercase leading-none mt-0.5">Technology</span>

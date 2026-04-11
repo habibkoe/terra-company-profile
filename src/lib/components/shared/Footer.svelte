@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Zap, ExternalLink, Briefcase, MessageCircle, Mail } from 'lucide-svelte';
+	import { ExternalLink, Briefcase, MessageCircle, Mail } from 'lucide-svelte';
+	import logo from '$lib/assets/logo.png';
 	import { NAV_ITEMS } from '$lib/constants';
 
 	const currentYear = new Date().getFullYear();
@@ -25,8 +26,8 @@
 			<!-- Brand -->
 			<div>
 				<button onclick={scrollToTop} class="flex items-center gap-2.5 mb-4 group">
-					<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-glow to-neon-green flex items-center justify-center">
-						<Zap size={18} class="text-space-900" />
+					<div class="w-9 h-9 rounded-lg overflow-hidden">
+						<img src={logo} alt="Terra Incognita Technology Logo" class="w-full h-full object-cover" />
 					</div>
 					<div class="text-left">
 						<span class="block font-bold text-white leading-none">Terra Incognita</span>
