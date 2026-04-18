@@ -40,25 +40,25 @@
 
 	// Gradients per category for card top accent
 	const categoryGradient: Record<ProjectCategory, string> = {
-		Farming: 'from-neon-green/30 to-transparent',
-		Hotel: 'from-cyan-glow/30 to-transparent',
+		Farming: 'from-secondary/30 to-transparent',
+		Hotel: 'from-primary/30 to-transparent',
 		Education: 'from-purple-500/30 to-transparent',
 		Financial: 'from-yellow-500/30 to-transparent',
 		Government: 'from-blue-500/30 to-transparent',
 		'E-Commerce': 'from-pink-500/30 to-transparent',
 		Construction: 'from-orange-500/30 to-transparent',
-		Other: 'from-cyan-glow/20 to-transparent'
+		Other: 'from-primary/20 to-transparent'
 	};
 </script>
 
 <section id="portfolio" class="py-24 lg:py-32 relative overflow-hidden">
 	<!-- Background decoration -->
-	<div class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-neon-green/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+	<div class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-secondary/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-12">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-cyan-glow border border-cyan-glow/30 bg-cyan-glow/5 mb-4 tracking-widest uppercase">
+			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-primary border border-primary/30 bg-primary/5 mb-4 tracking-widest uppercase">
 				Portofolio
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -78,8 +78,8 @@
 					onclick={() => (activeFilter = option)}
 					class={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
 						activeFilter === option
-							? 'bg-gradient-to-r from-cyan-glow to-cyan-400 text-space-900 shadow-[0_0_20px_rgba(0,212,255,0.4)]'
-							: 'glass text-slate-text hover:text-white hover:border-cyan-glow/30 border border-transparent'
+							? 'bg-gradient-to-r from-primary to-primary-400 text-brand-900 shadow-[0_0_20px_rgba(207, 109, 70,0.4)]'
+							: 'glass text-slate-text hover:text-white hover:border-primary/30 border border-transparent'
 					}`}
 				>
 					{option === 'All' ? '🔭 Semua' : categoryLabel[option as ProjectCategory]}
@@ -95,14 +95,14 @@
 					<div class={`h-1.5 bg-gradient-to-r ${categoryGradient[project.category as ProjectCategory]}`}></div>
 
 					<!-- Image Placeholder -->
-					<div class="relative h-44 bg-space-700 overflow-hidden">
+					<div class="relative h-44 bg-brand-700 overflow-hidden">
 						<div class="absolute inset-0 flex items-center justify-center">
 							<div class="text-5xl opacity-20 select-none">
 								{project.category === 'Farming' ? '🌾' : project.category === 'Hotel' ? '🏨' : project.category === 'Education' ? '📚' : project.category === 'Government' ? '🏛️' : project.category === 'E-Commerce' ? '🛒' : project.category === 'Construction' ? '🏗️' : '💳'}
 							</div>
 						</div>
 						<!-- Shimmer overlay on hover -->
-						<div class="absolute inset-0 bg-gradient-to-t from-space-800 via-transparent to-transparent opacity-70"></div>
+						<div class="absolute inset-0 bg-gradient-to-t from-brand-800 via-transparent to-transparent opacity-70"></div>
 						<!-- Category badge on image -->
 						<div class="absolute top-3 left-3">
 							<Badge variant={categoryBadgeVariant[project.category as ProjectCategory]}>
@@ -113,7 +113,7 @@
 
 					<!-- Content -->
 					<div class="p-5">
-						<h3 class="text-white font-bold text-base mb-2 group-hover:text-cyan-glow transition-colors duration-300 leading-tight">
+						<h3 class="text-white font-bold text-base mb-2 group-hover:text-primary transition-colors duration-300 leading-tight">
 							{project.title}
 						</h3>
 						<p class="text-slate-text text-xs leading-relaxed mb-4 line-clamp-2">
@@ -121,7 +121,7 @@
 						</p>
 
 						<!-- Meta info -->
-						<div class="space-y-1.5 mb-4">
+						<div class="brand-y-1.5 mb-4">
 							{#if project.client}
 								<div class="flex items-center gap-1.5 text-xs text-slate-text/70">
 									<Building size={11} />

@@ -22,23 +22,23 @@
 	};
 
 	const colorMap: Record<string, string> = {
-		'neon-green': 'bg-neon-green/10 text-neon-green shadow-[0_0_20px_rgba(57,255,20,0.15)]',
-		'cyan-glow': 'bg-cyan-glow/10 text-cyan-glow shadow-[0_0_20px_rgba(0,212,255,0.15)]',
+		'secondary': 'bg-secondary/10 text-secondary shadow-[0_0_20px_rgba(100, 142, 184,0.15)]',
+		'primary': 'bg-primary/10 text-primary shadow-[0_0_20px_rgba(207, 109, 70,0.15)]',
 		'purple-400': 'bg-purple-500/10 text-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.15)]',
 		'yellow-400': 'bg-yellow-500/10 text-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.15)]'
 	};
 </script>
 
-<section id="services" class="py-24 lg:py-32 relative bg-space-800/30">
+<section id="services" class="py-24 lg:py-32 relative bg-brand-800/30">
 	<!-- Top separator line -->
-	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-glow/20 to-transparent"></div>
+	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
 	<!-- Bottom separator line -->
-	<div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-glow/20 to-transparent"></div>
+	<div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-neon-green border border-neon-green/30 bg-neon-green/5 mb-4 tracking-widest uppercase">
+			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase">
 				Layanan Kami
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -55,7 +55,7 @@
 		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{#each SERVICES_DATA as service, i}
 				{@const IconComponent = iconMap[service.iconName]}
-				{@const colorClass = colorMap[service.color ?? 'cyan-glow']}
+				{@const colorClass = colorMap[service.color ?? 'primary']}
 
 				<Card
 					class="p-7 group cursor-pointer"
@@ -67,7 +67,7 @@
 					</div>
 
 					<!-- Title -->
-					<h3 class="text-white font-bold text-lg mb-3 group-hover:text-cyan-glow transition-colors duration-300">
+					<h3 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors duration-300">
 						{service.title}
 					</h3>
 
@@ -77,7 +77,7 @@
 					</p>
 
 					<!-- Learn More link -->
-					<div class="flex items-center gap-1.5 text-xs text-cyan-glow/60 group-hover:text-cyan-glow transition-colors duration-300">
+					<div class="flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors duration-300">
 						<span class="font-medium">Pelajari lebih lanjut</span>
 						<ArrowRight size={14} class="group-hover:translate-x-1 transition-transform duration-300" />
 					</div>

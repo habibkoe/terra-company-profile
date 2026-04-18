@@ -26,9 +26,9 @@
 
 	const variantClasses: Record<ButtonVariant, string> = {
 		primary:
-			'bg-gradient-to-r from-cyan-glow to-cyan-400 text-space-900 font-semibold hover:shadow-[0_0_30px_rgba(0,212,255,0.5)] hover:scale-[1.02]',
+			'bg-gradient-to-r from-primary to-primary-400 text-brand-900 font-semibold hover:shadow-[0_0_30px_rgba(207, 109, 70,0.5)] hover:scale-[1.02]',
 		outline:
-			'border border-cyan-glow/60 text-cyan-glow hover:bg-cyan-glow/10 hover:border-cyan-glow hover:shadow-[0_0_20px_rgba(0,212,255,0.2)]',
+			'border border-primary/60 text-primary hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_rgba(207, 109, 70,0.2)]',
 		ghost: 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
 	};
 
@@ -38,7 +38,7 @@
 		lg: 'px-8 py-4 text-lg'
 	};
 
-	const baseClass = `inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-glow/50 disabled:opacity-50 disabled:cursor-not-allowed`;
+	const baseClass = `inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:cursor-not-allowed`;
 
 	let finalClass = $derived(
 		`${baseClass} ${variantClasses[variant as ButtonVariant]} ${sizeClasses[size as ButtonSize]} ${extraClass}`

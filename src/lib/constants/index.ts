@@ -32,14 +32,14 @@ export const SERVICES_DATA: Service[] = [
 		description:
 			'Solusi pertanian cerdas berbasis IoT dan analitik data real-time untuk memaksimalkan hasil panen dan efisiensi operasional pertanian modern.',
 		iconName: 'Leaf',
-		color: 'neon-green'
+		color: 'secondary'
 	},
 	{
 		title: 'Hotel Management System',
 		description:
 			'Platform manajemen hotel terintegrasi, mulai dari reservasi, check-in/out, housekeeping, hingga laporan keuangan dalam satu ekosistem digital.',
 		iconName: 'Building2',
-		color: 'cyan-glow'
+		color: 'primary'
 	},
 	{
 		title: 'Education Technology',
@@ -60,14 +60,14 @@ export const SERVICES_DATA: Service[] = [
 		description:
 			'Pengembangan aplikasi web custom dengan performa tinggi menggunakan teknologi terkini, dari desain UI/UX hingga deployment dan maintenance.',
 		iconName: 'Code2',
-		color: 'cyan-glow'
+		color: 'primary'
 	},
 	{
 		title: 'IoT & Automation',
 		description:
 			'Integrasi perangkat IoT dan sistem otomasi industri untuk meningkatkan efisiensi operasional dan monitoring real-time di berbagai sektor.',
 		iconName: 'Cpu',
-		color: 'neon-green'
+		color: 'secondary'
 	}
 ];
 

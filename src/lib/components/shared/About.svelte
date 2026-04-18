@@ -6,12 +6,12 @@
 
 <section id="about" class="py-24 lg:py-32 relative overflow-hidden">
 	<!-- Decorative background -->
-	<div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-cyan-glow/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+	<div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-cyan-glow border border-cyan-glow/30 bg-cyan-glow/5 mb-4 tracking-widest uppercase">
+			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-primary border border-primary/30 bg-primary/5 mb-4 tracking-widest uppercase">
 				Tentang Kami
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -27,7 +27,7 @@
 		<!-- Content Grid -->
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left: Description + Values -->
-			<div class="space-y-6">
+			<div class="brand-y-6">
 				<p class="text-slate-text leading-relaxed text-lg">
 					Berdiri sejak 2019, kami telah dipercaya oleh puluhan perusahaan untuk merancang dan
 					membangun solusi teknologi yang scalable, aman, dan berdampak nyata. Dari startup hingga
@@ -37,8 +37,8 @@
 				<div class="grid sm:grid-cols-3 gap-4">
 					<!-- Mission -->
 					<Card class="p-5 text-center" hoverable>
-						<div class="w-10 h-10 rounded-xl bg-cyan-glow/10 flex items-center justify-center mx-auto mb-3">
-							<Target size={20} class="text-cyan-glow" />
+						<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+							<Target size={20} class="text-primary" />
 						</div>
 						<h3 class="text-white font-semibold text-sm mb-1">Misi</h3>
 						<p class="text-slate-text text-xs leading-relaxed">Solusi teknologi yang relevan dan berdampak nyata</p>
@@ -46,8 +46,8 @@
 
 					<!-- Vision -->
 					<Card class="p-5 text-center" hoverable>
-						<div class="w-10 h-10 rounded-xl bg-neon-green/10 flex items-center justify-center mx-auto mb-3">
-							<Eye size={20} class="text-neon-green" />
+						<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-3">
+							<Eye size={20} class="text-secondary" />
 						</div>
 						<h3 class="text-white font-semibold text-sm mb-1">Visi</h3>
 						<p class="text-slate-text text-xs leading-relaxed">Menjadi mitra digital terpercaya di Asia Tenggara</p>

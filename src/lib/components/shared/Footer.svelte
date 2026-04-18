@@ -17,9 +17,9 @@
 	}
 </script>
 
-<footer class="relative bg-space-950 border-t border-white/[0.06]">
+<footer class="relative bg-brand-950 border-t border-white/[0.06]">
 	<!-- Decorative top glow -->
-	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-glow/30 to-transparent"></div>
+	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
 	<div class="container-max section-padding py-14">
 		<div class="grid md:grid-cols-3 gap-10 mb-10">
@@ -31,7 +31,7 @@
 					</div>
 					<div class="text-left">
 						<span class="block font-bold text-white leading-none">Terra Incognita</span>
-						<span class="block text-[10px] text-cyan-glow font-mono tracking-[0.2em] uppercase">Technology</span>
+						<span class="block text-[10px] text-primary font-mono tracking-[0.2em] uppercase">Technology</span>
 					</div>
 				</button>
 				<p class="text-slate-text text-sm leading-relaxed max-w-sm">
@@ -46,7 +46,7 @@
 							aria-label={label}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-text hover:text-cyan-glow hover:border-cyan-glow/30 transition-all duration-300"
+							class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-text hover:text-primary hover:border-primary/30 transition-all duration-300"
 						>
 							<Icon size={15} />
 						</a>
@@ -57,12 +57,12 @@
 			<!-- Navigation links -->
 			<div>
 				<h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Navigasi</h4>
-				<ul class="space-y-2.5">
+				<ul class="brand-y-2.5">
 					{#each NAV_ITEMS as item}
 						<li>
 							<a
 								href={item.href}
-								class="text-slate-text text-sm hover:text-cyan-glow transition-colors duration-200"
+								class="text-slate-text text-sm hover:text-primary transition-colors duration-200"
 							>
 								{item.label}
 							</a>
@@ -74,9 +74,9 @@
 			<!-- Services summary -->
 			<div>
 				<h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Layanan</h4>
-				<ul class="space-y-2.5">
+				<ul class="brand-y-2.5">
 					{#each ['Smart Farming System', 'Hotel Management', 'Education Technology', 'Financial Technology', 'Web Development', 'IoT & Automation'] as service}
-						<li class="text-slate-text text-sm hover:text-cyan-glow transition-colors duration-200 cursor-default">
+						<li class="text-slate-text text-sm hover:text-primary transition-colors duration-200 cursor-default">
 							{service}
 						</li>
 					{/each}
@@ -90,7 +90,7 @@
 				&copy; {currentYear} Terra Incognita Technology. All rights reserved.
 			</p>
 			<p class="text-slate-text/40 text-xs">
-				Built with <span class="text-cyan-glow">Us</span> &bull; Deployed with love 🚀
+				Built with <span class="text-primary">Us</span> &bull; Deployed with love 🚀
 			</p>
 		</div>
 	</div>

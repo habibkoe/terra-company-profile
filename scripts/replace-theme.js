@@ -1,4 +1,48 @@
-/** @type {import('tailwindcss').Config} */
+import fs from 'fs';
+import path from 'path';
+
+const SRC_DIR = './src';
+const APP_CSS = './src/app.css';
+const TAILWIND_CONFIG = './tailwind.config.js';
+
+const replacements = [
+  { from: /cyan-glow/g, to: 'primary' },
+  { from: /cyan-400/g, to: 'primary-400' },
+  { from: /cyan-300/g, to: 'primary-300' },
+  { from: /neon-green/g, to: 'secondary' },
+  { from: /neon-cyan/g, to: 'secondary-cyan' },
+  { from: /space-/g, to: 'brand-' },
+  { from: /rgba\(0,\s*212,\s*255,/g, to: 'rgba(207, 109, 70,' },
+  { from: /rgba\(57,\s*255,\s*20,/g, to: 'rgba(100, 142, 184,' },
+];
+
+function processDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      processDirectory(fullPath);
+    } else if (fullPath.endsWith('.svelte') || fullPath.endsWith('.html') || fullPath.endsWith('.css') || fullPath.endsWith('.ts') || fullPath.endsWith('.js')) {
+      let content = fs.readFileSync(fullPath, 'utf-8');
+      let changed = false;
+      for (const { from, to } of replacements) {
+        if (from.test(content)) {
+          content = content.replace(from, to);
+          changed = true;
+        }
+      }
+      if (changed) {
+        fs.writeFileSync(fullPath, content);
+        console.log(`Updated ${fullPath}`);
+      }
+    }
+  }
+}
+
+processDirectory(SRC_DIR);
+
+// Update tailwind.config.js entirely
+const tailwindContent = `/** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -69,3 +113,7 @@ export default {
   },
   plugins: [],
 }
+`;
+
+fs.writeFileSync(TAILWIND_CONFIG, tailwindContent);
+console.log('Updated tailwind.config.js');

@@ -12,8 +12,8 @@
 	}>();
 
 	const variantClasses: Record<BadgeVariant, string> = {
-		cyan: 'bg-cyan-glow/10 text-cyan-glow border border-cyan-glow/30',
-		green: 'bg-neon-green/10 text-neon-green border border-neon-green/30',
+		cyan: 'bg-primary/10 text-primary border border-primary/30',
+		green: 'bg-secondary/10 text-secondary border border-secondary/30',
 		purple: 'bg-purple-500/10 text-purple-400 border border-purple-500/30',
 		yellow: 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/30',
 		default: 'bg-white/[0.06] text-slate-300 border border-white/10'

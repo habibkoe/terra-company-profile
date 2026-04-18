@@ -13,10 +13,10 @@
   }
 
   body {
-    @apply bg-space-900 text-white font-sans;
+    @apply bg-brand-900 text-white font-sans;
     background-image:
-      radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.04) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(57, 255, 20, 0.03) 0%, transparent 50%);
+      radial-gradient(ellipse at 20% 50%, rgba(207, 109, 70, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(100, 142, 184, 0.03) 0%, transparent 50%);
   }
 
   ::-webkit-scrollbar {
@@ -24,15 +24,15 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-space-900;
+    @apply bg-brand-900;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-cyan-glow/40 rounded-full;
+    @apply bg-primary/40 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-cyan-glow/70;
+    @apply bg-primary/70;
   }
 
   * {
@@ -46,15 +46,15 @@
   }
 
   .glass-hover {
-    @apply hover:bg-white/[0.08] hover:border-cyan-glow/30 transition-all duration-300;
+    @apply hover:bg-white/[0.08] hover:border-primary/30 transition-all duration-300;
   }
 
   .glow-text {
-    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    text-shadow: 0 0 30px rgba(207, 109, 70, 0.5);
   }
 
   .glow-border {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15), inset 0 0 20px rgba(0, 212, 255, 0.05);
+    box-shadow: 0 0 20px rgba(207, 109, 70, 0.15), inset 0 0 20px rgba(207, 109, 70, 0.05);
   }
 
   .section-padding {
@@ -66,13 +66,13 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-cyan-glow via-cyan-300 to-neon-green bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-primary-300 to-secondary bg-clip-text text-transparent;
   }
 
   .tech-grid-bg {
     background-image:
-      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(207, 109, 70, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(207, 109, 70, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 }

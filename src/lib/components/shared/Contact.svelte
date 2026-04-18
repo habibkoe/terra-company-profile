@@ -25,16 +25,16 @@
 	}
 </script>
 
-<section id="contact" class="py-24 lg:py-32 relative bg-space-800/30">
-	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"></div>
+<section id="contact" class="py-24 lg:py-32 relative bg-brand-800/30">
+	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent"></div>
 
 	<!-- Decorative blob -->
-	<div class="absolute right-0 top-1/2 w-[350px] h-[350px] bg-cyan-glow/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+	<div class="absolute right-0 top-1/2 w-[350px] h-[350px] bg-primary/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-neon-green border border-neon-green/30 bg-neon-green/5 mb-4 tracking-widest uppercase">
+			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase">
 				Kontak
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -48,15 +48,15 @@
 
 		<div class="grid lg:grid-cols-5 gap-8">
 			<!-- Left: Contact Info -->
-			<div class="lg:col-span-2 space-y-4">
+			<div class="lg:col-span-2 brand-y-4">
 				<!-- Email -->
 				<Card class="p-5 flex items-start gap-4" hoverable>
-					<div class="w-10 h-10 rounded-xl bg-cyan-glow/10 flex items-center justify-center flex-shrink-0">
-						<Mail size={18} class="text-cyan-glow" />
+					<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+						<Mail size={18} class="text-primary" />
 					</div>
 					<div>
 						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Email</p>
-						<a href={`mailto:${CONTACT_INFO.email}`} class="text-white text-sm font-medium hover:text-cyan-glow transition-colors duration-200">
+						<a href={`mailto:${CONTACT_INFO.email}`} class="text-white text-sm font-medium hover:text-primary transition-colors duration-200">
 							{CONTACT_INFO.email}
 						</a>
 					</div>
@@ -64,12 +64,12 @@
 
 				<!-- Phone -->
 				<Card class="p-5 flex items-start gap-4" hoverable>
-					<div class="w-10 h-10 rounded-xl bg-neon-green/10 flex items-center justify-center flex-shrink-0">
-						<Phone size={18} class="text-neon-green" />
+					<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+						<Phone size={18} class="text-secondary" />
 					</div>
 					<div>
 						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Telepon</p>
-						<a href={`tel:${CONTACT_INFO.phone}`} class="text-white text-sm font-medium hover:text-neon-green transition-colors duration-200">
+						<a href={`tel:${CONTACT_INFO.phone}`} class="text-white text-sm font-medium hover:text-secondary transition-colors duration-200">
 							{CONTACT_INFO.phone}
 						</a>
 					</div>
@@ -91,10 +91,10 @@
 				<!-- Why us card -->
 				<Card class="p-6 mt-6" glowing>
 					<h4 class="text-white font-semibold mb-3">Mengapa Terra Incognita?</h4>
-					<ul class="space-y-2">
+					<ul class="brand-y-2">
 						{#each ['Respon cepat (< 24 jam)', 'Konsultasi awal gratis', 'Tim berpengalaman 5+ tahun', 'Support pasca-deployment'] as item}
 							<li class="flex items-center gap-2 text-sm text-slate-text">
-								<CheckCircle size={14} class="text-neon-green flex-shrink-0" />
+								<CheckCircle size={14} class="text-secondary flex-shrink-0" />
 								{item}
 							</li>
 						{/each}
@@ -108,18 +108,18 @@
 					{#if isSubmitted}
 						<!-- Success State -->
 						<div class="text-center py-12">
-							<div class="w-16 h-16 rounded-full bg-neon-green/10 flex items-center justify-center mx-auto mb-4">
-								<CheckCircle size={32} class="text-neon-green" />
+							<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+								<CheckCircle size={32} class="text-secondary" />
 							</div>
 							<h3 class="text-white font-bold text-xl mb-2">Pesan Terkirim!</h3>
 							<p class="text-slate-text">Tim kami akan menghubungi Anda dalam 1×24 jam. Terima kasih!</p>
 							<button
 								onclick={() => { isSubmitted = false; formData = { name: '', email: '', subject: '', message: '' }; }}
-								class="mt-6 text-cyan-glow text-sm hover:underline"
+								class="mt-6 text-primary text-sm hover:underline"
 							>Kirim pesan lain</button>
 						</div>
 					{:else}
-						<form onsubmit={handleSubmit} class="space-y-5">
+						<form onsubmit={handleSubmit} class="brand-y-5">
 							<!-- Name & Email row -->
 							<div class="grid sm:grid-cols-2 gap-4">
 								<div>
@@ -130,7 +130,7 @@
 										bind:value={formData.name}
 										required
 										placeholder="John Doe"
-										class="w-full bg-space-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-cyan-glow/50 focus:ring-1 focus:ring-cyan-glow/30 transition-all duration-200"
+										class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
 									/>
 								</div>
 								<div>
@@ -141,7 +141,7 @@
 										bind:value={formData.email}
 										required
 										placeholder="john@example.com"
-										class="w-full bg-space-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-cyan-glow/50 focus:ring-1 focus:ring-cyan-glow/30 transition-all duration-200"
+										class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
 									/>
 								</div>
 							</div>
@@ -154,7 +154,7 @@
 									type="text"
 									bind:value={formData.subject}
 									placeholder="Apa yang ingin Anda diskusikan?"
-									class="w-full bg-space-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-cyan-glow/50 focus:ring-1 focus:ring-cyan-glow/30 transition-all duration-200"
+									class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
 								/>
 							</div>
 
@@ -167,14 +167,14 @@
 									required
 									rows={5}
 									placeholder="Ceritakan proyek atau kebutuhan Anda..."
-									class="w-full bg-space-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-cyan-glow/50 focus:ring-1 focus:ring-cyan-glow/30 transition-all duration-200 resize-none"
+									class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200 resize-none"
 								></textarea>
 							</div>
 
 							<!-- Submit -->
 							<Button type="submit" variant="primary" size="md" class="w-full" disabled={isSubmitting}>
 								{#if isSubmitting}
-									<span class="animate-spin w-4 h-4 border-2 border-space-900/30 border-t-space-900 rounded-full"></span>
+									<span class="animate-spin w-4 h-4 border-2 border-brand-900/30 border-t-brand-900 rounded-full"></span>
 									Mengirim...
 								{:else}
 									<Send size={16} />
