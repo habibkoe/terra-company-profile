@@ -8,8 +8,8 @@
 	const socialLinks = [
 		{ href: 'https://github.com/terraincognitatech', label: 'GitHub', Icon: ExternalLink },
 		{ href: 'https://linkedin.com/company/terraincognitatechnology', label: 'LinkedIn', Icon: Briefcase },
-		{ href: 'https://twitter.com/terraincognita', label: 'Twitter', Icon: MessageCircle },
-		{ href: 'mailto:hello@terraincognitatechnology.com', label: 'Email', Icon: Mail }
+		{ href: 'https://twitter.com/incognita4722', label: 'Twitter', Icon: MessageCircle },
+		{ href: 'mailto:terraincognitatechnology@gmail.com', label: 'Email', Icon: Mail }
 	];
 
 	function scrollToTop() {

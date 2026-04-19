@@ -3,6 +3,7 @@
 	import type { ContactFormData } from '$lib/types';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
+	import Input from '$lib/components/ui/Input.svelte';
 	import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-svelte';
 
 	let formData = $state<ContactFormData>({
@@ -122,54 +123,43 @@
 						<form onsubmit={handleSubmit} class="brand-y-5">
 							<!-- Name & Email row -->
 							<div class="grid sm:grid-cols-2 gap-4">
-								<div>
-									<label for="contact-name" class="block text-xs font-medium text-slate-text mb-2 uppercase tracking-wider">Nama Lengkap *</label>
-									<input
-										id="contact-name"
-										type="text"
-										bind:value={formData.name}
-										required
-										placeholder="John Doe"
-										class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
-									/>
-								</div>
-								<div>
-									<label for="contact-email" class="block text-xs font-medium text-slate-text mb-2 uppercase tracking-wider">Email *</label>
-									<input
-										id="contact-email"
-										type="email"
-										bind:value={formData.email}
-										required
-										placeholder="john@example.com"
-										class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
-									/>
-								</div>
-							</div>
-
-							<!-- Subject -->
-							<div>
-								<label for="contact-subject" class="block text-xs font-medium text-slate-text mb-2 uppercase tracking-wider">Subjek</label>
-								<input
-									id="contact-subject"
+								<Input
+									id="contact-name"
+									label="Nama Lengkap *"
 									type="text"
-									bind:value={formData.subject}
-									placeholder="Apa yang ingin Anda diskusikan?"
-									class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200"
+									bind:value={formData.name}
+									required
+									placeholder="John Doe"
+								/>
+								<Input
+									id="contact-email"
+									label="Email *"
+									type="email"
+									bind:value={formData.email}
+									required
+									placeholder="john@example.com"
 								/>
 							</div>
 
+							<!-- Subject -->
+							<Input
+								id="contact-subject"
+								label="Subjek"
+								type="text"
+								bind:value={formData.subject}
+								placeholder="Apa yang ingin Anda diskusikan?"
+							/>
+
 							<!-- Message -->
-							<div>
-								<label for="contact-message" class="block text-xs font-medium text-slate-text mb-2 uppercase tracking-wider">Pesan *</label>
-								<textarea
-									id="contact-message"
-									bind:value={formData.message}
-									required
-									rows={5}
-									placeholder="Ceritakan proyek atau kebutuhan Anda..."
-									class="w-full bg-brand-700/60 border border-white/[0.08] rounded-lg px-4 py-3 text-white text-sm placeholder-slate-text/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200 resize-none"
-								></textarea>
-							</div>
+							<Input
+								id="contact-message"
+								label="Pesan *"
+								type="textarea"
+								bind:value={formData.message}
+								required
+								rows={5}
+								placeholder="Ceritakan proyek atau kebutuhan Anda..."
+							/>
 
 							<!-- Submit -->
 							<Button type="submit" variant="primary" size="md" class="w-full" disabled={isSubmitting}>
