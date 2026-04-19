@@ -171,7 +171,7 @@ export const PROJECTS_DATA: Project[] = [
 // ─── Contact Information ──────────────────────────────────────────────────────
 
 export const CONTACT_INFO: ContactInfo = {
-	email: 'perianinnovation@gmail.com',
+	email: 'terraincognitatechnology@gmail.com',
 	phone: '+62 895 0249 3848',
 	address: 'Jl. Montong Gading - Perian, Pesanggrahan, Kec. Montong Gading, Kabupaten Lombok Timur, Nusa Tenggara Barat'
 };

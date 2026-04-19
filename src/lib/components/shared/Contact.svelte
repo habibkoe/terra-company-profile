@@ -63,7 +63,7 @@
 				</Card>
 
 				<!-- Phone -->
-				<Card class="p-5 flex items-start gap-4" hoverable>
+				<Card class="p-5 flex items-start gap-4 mt-6" hoverable>
 					<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
 						<Phone size={18} class="text-secondary" />
 					</div>
@@ -76,7 +76,7 @@
 				</Card>
 
 				<!-- Address -->
-				<Card class="p-5 flex items-start gap-4" hoverable>
+				<Card class="p-5 flex items-start gap-4 mt-6" hoverable>
 					<div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
 						<MapPin size={18} class="text-purple-400" />
 					</div>
