@@ -27,15 +27,21 @@
 </script>
 
 <section id="contact" class="py-24 lg:py-32 relative bg-brand-800/30">
-	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent"></div>
+	<div
+		class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent"
+	></div>
 
 	<!-- Decorative blob -->
-	<div class="absolute right-0 top-1/2 w-[350px] h-[350px] bg-primary/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+	<div
+		class="absolute right-0 top-1/2 w-[350px] h-[350px] bg-primary/[0.04] rounded-full blur-[100px] pointer-events-none"
+	></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase">
+			<span
+				class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase"
+			>
 				Kontak
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -52,12 +58,17 @@
 			<div class="lg:col-span-2 brand-y-4">
 				<!-- Email -->
 				<Card class="p-5 flex items-start gap-4" hoverable>
-					<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+					<div
+						class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"
+					>
 						<Mail size={18} class="text-primary" />
 					</div>
 					<div>
 						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Email</p>
-						<a href={`mailto:${CONTACT_INFO.email}`} class="text-white text-sm font-medium hover:text-primary transition-colors duration-200">
+						<a
+							href={`mailto:${CONTACT_INFO.email}`}
+							class="text-white text-sm font-medium hover:text-primary transition-colors duration-200"
+						>
 							{CONTACT_INFO.email}
 						</a>
 					</div>
@@ -65,12 +76,17 @@
 
 				<!-- Phone -->
 				<Card class="p-5 flex items-start gap-4 mt-6" hoverable>
-					<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+					<div
+						class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0"
+					>
 						<Phone size={18} class="text-secondary" />
 					</div>
 					<div>
 						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Telepon</p>
-						<a href={`tel:${CONTACT_INFO.phone}`} class="text-white text-sm font-medium hover:text-secondary transition-colors duration-200">
+						<a
+							href={`tel:${CONTACT_INFO.phone}`}
+							class="text-white text-sm font-medium hover:text-secondary transition-colors duration-200"
+						>
 							{CONTACT_INFO.phone}
 						</a>
 					</div>
@@ -78,7 +94,9 @@
 
 				<!-- Address -->
 				<Card class="p-5 flex items-start gap-4 mt-6" hoverable>
-					<div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+					<div
+						class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0"
+					>
 						<MapPin size={18} class="text-purple-400" />
 					</div>
 					<div>
@@ -109,20 +127,27 @@
 					{#if isSubmitted}
 						<!-- Success State -->
 						<div class="text-center py-12">
-							<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+							<div
+								class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4"
+							>
 								<CheckCircle size={32} class="text-secondary" />
 							</div>
 							<h3 class="text-white font-bold text-xl mb-2">Pesan Terkirim!</h3>
-							<p class="text-slate-text">Tim kami akan menghubungi Anda dalam 1×24 jam. Terima kasih!</p>
+							<p class="text-slate-text">
+								Tim kami akan menghubungi Anda dalam 1×24 jam. Terima kasih!
+							</p>
 							<button
-								onclick={() => { isSubmitted = false; formData = { name: '', email: '', subject: '', message: '' }; }}
-								class="mt-6 text-primary text-sm hover:underline"
-							>Kirim pesan lain</button>
+								onclick={() => {
+									isSubmitted = false;
+									formData = { name: '', email: '', subject: '', message: '' };
+								}}
+								class="mt-6 text-primary text-sm hover:underline">Kirim pesan lain</button
+							>
 						</div>
 					{:else}
 						<form onsubmit={handleSubmit} class="brand-y-5">
 							<!-- Name & Email row -->
-							<div class="grid sm:grid-cols-2 gap-4">
+							<div class="grid sm:grid-cols-2 gap-4 mb-6">
 								<Input
 									id="contact-name"
 									label="Nama Lengkap *"
@@ -142,29 +167,40 @@
 							</div>
 
 							<!-- Subject -->
-							<Input
-								id="contact-subject"
-								label="Subjek"
-								type="text"
-								bind:value={formData.subject}
-								placeholder="Apa yang ingin Anda diskusikan?"
-							/>
-
+							<div class="mb-6">
+								<Input
+									id="contact-subject"
+									label="Subjek"
+									type="text"
+									bind:value={formData.subject}
+									placeholder="Apa yang ingin Anda diskusikan?"
+								/>
+							</div>
 							<!-- Message -->
-							<Input
-								id="contact-message"
-								label="Pesan *"
-								type="textarea"
-								bind:value={formData.message}
-								required
-								rows={5}
-								placeholder="Ceritakan proyek atau kebutuhan Anda..."
-							/>
+							<div class="mb-6">
+								<Input
+									id="contact-message"
+									label="Pesan *"
+									type="textarea"
+									bind:value={formData.message}
+									required
+									rows={5}
+									placeholder="Ceritakan proyek atau kebutuhan Anda..."
+								/>
+							</div>
 
 							<!-- Submit -->
-							<Button type="submit" variant="primary" size="md" class="w-full" disabled={isSubmitting}>
+							<Button
+								type="submit"
+								variant="primary"
+								size="md"
+								class="w-full"
+								disabled={isSubmitting}
+							>
 								{#if isSubmitting}
-									<span class="animate-spin w-4 h-4 border-2 border-brand-900/30 border-t-brand-900 rounded-full"></span>
+									<span
+										class="animate-spin w-4 h-4 border-2 border-brand-900/30 border-t-brand-900 rounded-full"
+									></span>
 									Mengirim...
 								{:else}
 									<Send size={16} />
