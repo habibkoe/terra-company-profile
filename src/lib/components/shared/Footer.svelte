@@ -6,9 +6,9 @@
 	const currentYear = new Date().getFullYear();
 
 	const socialLinks = [
-		{ href: 'https://github.com/terraincognitatech', label: 'GitHub', Icon: ExternalLink },
+		{ href: 'https://github.com/terraincognitatechnology', label: 'GitHub', Icon: ExternalLink },
 		{ href: 'https://linkedin.com/company/terraincognitatechnology', label: 'LinkedIn', Icon: Briefcase },
-		{ href: 'https://twitter.com/incognita4722', label: 'Twitter', Icon: MessageCircle },
+		{ href: 'https://x.com/incognita4722', label: 'Twitter', Icon: MessageCircle },
 		{ href: 'mailto:terraincognitatechnology@gmail.com', label: 'Email', Icon: Mail }
 	];
 
