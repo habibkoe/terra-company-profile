@@ -29,7 +29,7 @@
 			<!-- Left: Description + Values -->
 			<div class="brand-y-6">
 				<p class="text-slate-text leading-relaxed text-lg">
-					Berdiri sejak 2019, kami telah dipercaya oleh puluhan perusahaan untuk merancang dan
+					Berdiri sejak 2004, kami telah dipercaya oleh puluhan perusahaan untuk merancang dan
 					membangun solusi teknologi yang scalable, aman, dan berdampak nyata. Dari startup hingga
 					korporat, kami menghadirkan pendekatan yang human-centered dan engineer-proven.
 				</p>
