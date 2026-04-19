@@ -100,14 +100,14 @@ export const PROJECTS_DATA: Project[] = [
 	// Hotel
 	{
 		id: 3,
-		title: 'LuxStay PMS',
+		title: 'Han Pollaris Construction',
 		description:
-			'Property Management System untuk jaringan hotel bintang 4 dengan fitur reservasi online, channel manager, dan analitik revenue.',
-		category: 'Hotel',
-		imageUrl: '/images/projects/luxstay.jpg',
-		tags: ['PMS', 'Booking Engine', 'Laravel', 'Vue.js'],
+			'Sistem informasi manajemen proyek konstruksi dengan fitur manajemen tugas, company profile.',
+		category: 'Construction',
+		imageUrl: '/images/projects/han-pollaris.jpg',
+		tags: ['Construction', 'Project Management', 'Laravel', 'Vanilla JS'],
 		year: 2024,
-		client: 'LuxStay Hotel Group'
+		client: 'Han Pollaris Konsultan'
 	},
 	{
 		id: 4,
