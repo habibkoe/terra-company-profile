@@ -23,6 +23,7 @@ export interface Project {
 	tags: string[];
 	year?: number;
 	client?: string;
+	link?: string;
 }
 
 // ─── Services ─────────────────────────────────────────────────────────────────

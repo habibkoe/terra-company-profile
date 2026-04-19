@@ -5,11 +5,13 @@
 		class: extraClass = '',
 		glowing = false,
 		hoverable = false,
+		href,
 		children
 	} = $props<{
 		class?: string;
 		glowing?: boolean;
 		hoverable?: boolean;
+		href?: string;
 		children?: Snippet;
 	}>();
 
@@ -18,6 +20,12 @@
 	);
 </script>
 
-<div class={finalClass}>
-	{@render children?.()}
-</div>
+{#if href}
+	<a {href} target="_blank" rel="noopener noreferrer" class={`${finalClass} block`}>
+		{@render children?.()}
+	</a>
+{:else}
+	<div class={finalClass}>
+		{@render children?.()}
+	</div>
+{/if}

@@ -90,7 +90,7 @@
 		<!-- Projects Grid -->
 		<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
 			{#each filteredProjects as project (project.id)}
-				<Card class="overflow-hidden group" hoverable>
+				<Card class="overflow-hidden group" hoverable href={project.link}>
 					<!-- Top accent gradient -->
 					<div class={`h-1.5 bg-gradient-to-r ${categoryGradient[project.category as ProjectCategory]}`}></div>
 

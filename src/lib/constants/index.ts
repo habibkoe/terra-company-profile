@@ -84,7 +84,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/agrismart.jpg',
 		tags: ['IoT', 'Dashboard', 'SvelteKit', 'MQTT'],
 		year: 2024,
-		client: 'PT Agrindo Makmur'
+		client: 'PT Agrindo Makmur',
+		link: '#'
 	},
 	{
 		id: 2,
@@ -95,7 +96,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/hydrofarm.jpg',
 		tags: ['Hydroponics', 'Mobile', 'React Native', 'IoT'],
 		year: 2023,
-		client: 'CV HydroGreen'
+		client: 'CV HydroGreen',
+		link: '#'
 	},
 	// Hotel
 	{
@@ -107,7 +109,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/han-pollaris.jpg',
 		tags: ['Construction', 'Project Management', 'Laravel', 'Vanilla JS'],
 		year: 2024,
-		client: 'Han Pollaris Konsultan'
+		client: 'Han Pollaris Konsultan',
+		link: 'https://www.hanpollariskonsultan.com/'
 	},
 	{
 		id: 4,
@@ -130,7 +133,9 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/educonnect.jpg',
 		tags: ['Financial', 'Record', 'SvelteKit', 'PostgreSQL'],
 		year: 2024,
-		client: 'Legacy FA Pte Ltd'
+		client: 'Legacy FA Pte Ltd',
+		link: '#'
+		
 	},
 	{
 		id: 6,
@@ -141,7 +146,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/skillpath.jpg',
 		tags: ['E-Learning', 'Absensi', 'SvelteKit', 'PostgreSQL'],
 		year: 2024,
-		client: 'SMPN 3 Tanjung'
+		client: 'SMPN 3 Tanjung',
+		link: 'https://absensi-siswa-smp-klu.vercel.app'
 	},
 	// Financial
 	{
@@ -153,7 +159,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/paynow.jpg',
 		tags: ['E-Commerce', 'QRIS', 'API', 'Node.js', 'Laravel', 'SvelteKit'],
 		year: 2024,
-		client: 'Cake and Catering Perian'
+		client: 'Cake and Catering Perian',
+		link: '#'
 	},
 	{
 		id: 8,
@@ -164,7 +171,8 @@ export const PROJECTS_DATA: Project[] = [
 		imageUrl: '/images/projects/treasury.jpg',
 		tags: ['Government', 'Koperasi', 'Laravel', 'Chart.js'],
 		year: 2023,
-		client: 'Pemerintah Kota Surabaya'
+		client: 'Pemerintah Kota Surabaya',
+		link: 'https://awasiboyo.surabaya.go.id/'
 	}
 ];
 
