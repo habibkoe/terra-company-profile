@@ -7,7 +7,7 @@
 
 	const socialLinks = [
 		{ href: 'https://github.com/terraincognitatechnology', label: 'GitHub', Icon: ExternalLink },
-		{ href: 'https://linkedin.com/company/terraincognitatechnology', label: 'LinkedIn', Icon: Briefcase },
+		{ href: 'https://www.linkedin.com/in/terraincognitatechnology/', label: 'LinkedIn', Icon: Briefcase },
 		{ href: 'https://x.com/incognita4722', label: 'Twitter', Icon: MessageCircle },
 		{ href: 'mailto:terraincognitatechnology@gmail.com', label: 'Email', Icon: Mail }
 	];
