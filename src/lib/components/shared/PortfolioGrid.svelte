@@ -2,7 +2,7 @@
 	import type { Project, ProjectCategory } from '$lib/types';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Badge from '$lib/components/ui/Badge.svelte';
-	import { Calendar, Building, Tag } from 'lucide-svelte';
+	import { Calendar, Building, Tag, Sprout, Hotel, GraduationCap, Coins, Landmark, ShoppingCart, HardHat, Sparkles } from 'lucide-svelte';
 	import { i18n } from '$lib/stores/i18n.svelte';
 
 	let { projects } = $props<{ projects: Project[] }>();
@@ -37,15 +37,15 @@
 		Other: 'cyan'
 	};
 
-	const categoryLabel: Record<ProjectCategory, string> = {
-		Farming: '🌿 Farming',
-		Hotel: '🏨 Hotel',
-		Education: '🎓 Education',
-		Financial: '💰 Financial',
-		Government: '🏛️ Government',
-		'E-Commerce': '🛒 E-Commerce',
-		Construction: '🏗️ Construction',
-		Other: '✨ Other'
+	const categoryIcon: Record<ProjectCategory, any> = {
+		Farming: Sprout,
+		Hotel: Hotel,
+		Education: GraduationCap,
+		Financial: Coins,
+		Government: Landmark,
+		'E-Commerce': ShoppingCart,
+		Construction: HardHat,
+		Other: Sparkles
 	};
 
 	// Gradients per category for card top accent
@@ -88,13 +88,18 @@
 			{#each FILTER_OPTIONS as option}
 				<button
 					onclick={() => (activeFilter = option)}
-					class={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+					class={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
 						activeFilter === option
 							? 'bg-gradient-to-r from-primary to-primary-400 text-brand-900 shadow-[0_0_20px_rgba(207, 109, 70,0.4)]'
 							: 'glass text-slate-text hover:text-white hover:border-primary/30 border border-transparent'
 					}`}
 				>
-					{option === 'All' ? i18n.t.common.all : categoryLabel[option as ProjectCategory]}
+					{#if option === 'All'}
+						{i18n.t.common.all}
+					{:else}
+						{@const Icon = categoryIcon[option as ProjectCategory]}
+						<Icon size={14} class="mr-1.5 opacity-70" /> {option}
+					{/if}
 				</button>
 			{/each}
 		</div>
@@ -102,6 +107,7 @@
 		<!-- Projects Grid -->
 		<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
 			{#each filteredProjects as project (project.id)}
+				{@const ProjectIcon = categoryIcon[project.category as ProjectCategory]}
 				<Card class="overflow-hidden group" hoverable href={project.link}>
 					<!-- Top accent gradient -->
 					<div
@@ -111,20 +117,8 @@
 					<!-- Image Placeholder -->
 					<div class="relative h-44 bg-brand-700 overflow-hidden">
 						<div class="absolute inset-0 flex items-center justify-center">
-							<div class="text-5xl opacity-20 select-none">
-								{project.category === 'Farming'
-									? '🌾'
-									: project.category === 'Hotel'
-										? '🏨'
-										: project.category === 'Education'
-											? '📚'
-											: project.category === 'Government'
-												? '🏛️'
-												: project.category === 'E-Commerce'
-													? '🛒'
-													: project.category === 'Construction'
-														? '🏗️'
-														: '💳'}
+							<div class="opacity-20 select-none">
+								<ProjectIcon size={48} />
 							</div>
 						</div>
 						<!-- Shimmer overlay on hover -->
