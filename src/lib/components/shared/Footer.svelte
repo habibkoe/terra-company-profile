@@ -13,7 +13,7 @@
 			label: 'LinkedIn',
 			Icon: Briefcase
 		},
-		{ href: 'https://x.com/incognita4722', label: 'Twitter', Icon: MessageCircle },
+		{ href: 'https://x.com/terra_inc', label: 'Twitter', Icon: MessageCircle },
 		{ href: 'mailto:terraincognitatechnology@gmail.com', label: 'Email', Icon: Mail }
 	];
 
