@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/Button.svelte';
 	import { ArrowRight, ChevronDown } from 'lucide-svelte';
+	import { i18n } from '$lib/stores/i18n.svelte';
 </script>
 
 <section
@@ -40,18 +41,20 @@
 	<!-- Content -->
 	<div class="relative z-10 container-max section-padding text-center">
 		<!-- Badge -->
-		<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/20 mb-8 animate-fade-in">
+		<div
+			class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/20 mb-8 animate-fade-in"
+		>
 			<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-			<span class="text-sm text-slate-300 font-mono tracking-wider">Inovasi Digital &bull; Indonesia</span>
+			<span class="text-sm text-slate-300 font-mono tracking-wider">{i18n.t.hero.badge}</span>
 		</div>
 
 		<!-- Headline -->
 		<h1
 			class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black !leading-[1.2] tracking-tight mb-6 animate-slide-up"
 		>
-			<span class="block text-white">Terra</span>
-			<span class="block gradient-text glow-text">Incognita</span>
-			<span class="block text-white">Technology</span>
+			<span class="block text-white">{i18n.t.hero.title1}</span>
+			<span class="block gradient-text glow-text">{i18n.t.hero.title2}</span>
+			<span class="block text-white">{i18n.t.hero.title3}</span>
 		</h1>
 
 		<!-- Tagline -->
@@ -59,10 +62,7 @@
 			class="text-lg sm:text-xl lg:text-2xl text-slate-text max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up"
 			style="animation-delay: 0.2s;"
 		>
-			Kami merancang solusi teknologi yang mengubah cara bisnis bekerja —
-			dari <span class="text-secondary font-semibold">pertanian cerdas</span>,
-			<span class="text-primary font-semibold">manajemen hotel</span>,
-			hingga <span class="text-primary-300 font-semibold">platform edukasi</span> digital.
+			{@html i18n.t.hero.tagline}
 		</p>
 
 		<!-- CTA Buttons -->
@@ -71,11 +71,11 @@
 			style="animation-delay: 0.4s;"
 		>
 			<Button href="#portfolio" variant="primary" size="lg">
-				Lihat Portofolio
+				{i18n.t.hero.btnPrimary}
 				<ArrowRight size={20} />
 			</Button>
 			<Button href="#contact" variant="outline" size="lg">
-				Diskusi Proyek
+				{i18n.t.hero.btnOutline}
 			</Button>
 		</div>
 
@@ -96,8 +96,11 @@
 
 	<!-- Scroll Indicator -->
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-		<a href="#about" aria-label="Scroll ke bawah">
-			<ChevronDown size={28} class="text-slate-text/40 hover:text-primary transition-colors duration-300" />
+		<a href="#about" aria-label={i18n.t.hero.scrollDown}>
+			<ChevronDown
+				size={28}
+				class="text-slate-text/40 hover:text-primary transition-colors duration-300"
+			/>
 		</a>
 	</div>
 </section>

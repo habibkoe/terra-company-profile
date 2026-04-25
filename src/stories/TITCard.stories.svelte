@@ -24,7 +24,9 @@
 		<div style="padding: 2rem; background: #050B18;">
 			<TITCard class="p-6 max-w-sm">
 				<h3 style="color: white; margin-bottom: 0.5rem; font-weight: 600;">Card Title</h3>
-				<p style="color: #8B9CB6; font-size: 0.875rem;">This is a glassmorphism card component with a dark, elegant style.</p>
+				<p style="color: #8B9CB6; font-size: 0.875rem;">
+					This is a glassmorphism card component with a dark, elegant style.
+				</p>
 			</TITCard>
 		</div>
 	{/snippet}
@@ -35,7 +37,9 @@
 		<div style="padding: 2rem; background: #050B18;">
 			<TITCard class="p-6 max-w-sm" glowing>
 				<h3 style="color: white; margin-bottom: 0.5rem; font-weight: 600;">Glowing Card</h3>
-				<p style="color: #8B9CB6; font-size: 0.875rem;">This card has a subtle cyan glow border effect.</p>
+				<p style="color: #8B9CB6; font-size: 0.875rem;">
+					This card has a subtle cyan glow border effect.
+				</p>
 			</TITCard>
 		</div>
 	{/snippet}
@@ -46,7 +50,9 @@
 		<div style="padding: 2rem; background: #050B18;">
 			<TITCard class="p-6 max-w-sm" hoverable>
 				<h3 style="color: white; margin-bottom: 0.5rem; font-weight: 600;">Hoverable Card</h3>
-				<p style="color: #8B9CB6; font-size: 0.875rem;">Hover over this card to see the interaction effect.</p>
+				<p style="color: #8B9CB6; font-size: 0.875rem;">
+					Hover over this card to see the interaction effect.
+				</p>
 			</TITCard>
 		</div>
 	{/snippet}

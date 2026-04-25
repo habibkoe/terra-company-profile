@@ -6,18 +6,28 @@
 // ─── Navigation ──────────────────────────────────────────────────────────────
 
 export interface NavItem {
-	label: string;
+	id: 'home' | 'about' | 'services' | 'portfolio' | 'contact';
 	href: string;
 }
 
 // ─── Projects / Portfolio ─────────────────────────────────────────────────────
 
-export type ProjectCategory = 'Farming' | 'Hotel' | 'Education' | 'Financial' | 'Government' | 'E-Commerce' | 'Construction' | 'Other';
+export type ProjectCategory =
+	| 'Farming'
+	| 'Hotel'
+	| 'Education'
+	| 'Financial'
+	| 'Government'
+	| 'E-Commerce'
+	| 'Construction'
+	| 'Other';
 
 export interface Project {
 	id: number;
 	title: string;
+	title_en?: string;
 	description: string;
+	description_en?: string;
 	category: ProjectCategory;
 	imageUrl: string;
 	tags: string[];
@@ -30,7 +40,9 @@ export interface Project {
 
 export interface Service {
 	title: string;
+	title_en?: string;
 	description: string;
+	description_en?: string;
 	iconName: string; // Lucide icon identifier
 	color?: string; // Tailwind color class untuk accent
 }
@@ -47,8 +59,8 @@ export interface TeamMember {
 // ─── Statistics ───────────────────────────────────────────────────────────────
 
 export interface Stat {
+	id: 'projects' | 'clients' | 'experience' | 'team';
 	value: string;
-	label: string;
 	suffix?: string;
 }
 

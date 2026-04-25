@@ -5,6 +5,7 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import Input from '$lib/components/ui/Input.svelte';
 	import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-svelte';
+	import { i18n } from '$lib/stores/i18n.svelte';
 
 	let formData = $state<ContactFormData>({
 		name: '',
@@ -42,14 +43,13 @@
 			<span
 				class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase"
 			>
-				Kontak
+				{i18n.t.contact.badge}
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
-				Siap Memulai<br />
-				<span class="gradient-text">Proyek Bersama?</span>
+				{@html i18n.t.contact.title}
 			</h2>
 			<p class="text-slate-text text-lg max-w-xl mx-auto leading-relaxed">
-				Ceritakan tantangan bisnis Anda. Tim kami siap merancang solusi yang tepat sasaran.
+				{i18n.t.contact.desc}
 			</p>
 		</div>
 
@@ -64,7 +64,9 @@
 						<Mail size={18} class="text-primary" />
 					</div>
 					<div>
-						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Email</p>
+						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">
+							{i18n.t.contact.emailTitle}
+						</p>
 						<a
 							href={`mailto:${CONTACT_INFO.email}`}
 							class="text-white text-sm font-medium hover:text-primary transition-colors duration-200"
@@ -82,7 +84,9 @@
 						<Phone size={18} class="text-secondary" />
 					</div>
 					<div>
-						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Telepon</p>
+						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">
+							{i18n.t.contact.phoneTitle}
+						</p>
 						<a
 							href={`tel:${CONTACT_INFO.phone}`}
 							class="text-white text-sm font-medium hover:text-secondary transition-colors duration-200"
@@ -100,7 +104,9 @@
 						<MapPin size={18} class="text-purple-400" />
 					</div>
 					<div>
-						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">Alamat</p>
+						<p class="text-slate-text text-xs mb-1 font-mono uppercase tracking-wider">
+							{i18n.t.contact.addressTitle}
+						</p>
 						<p class="text-white text-sm font-medium leading-relaxed">
 							{CONTACT_INFO.address}
 						</p>
@@ -109,9 +115,9 @@
 
 				<!-- Why us card -->
 				<Card class="p-6 mt-6" glowing>
-					<h4 class="text-white font-semibold mb-3">Mengapa Terra Incognita?</h4>
+					<h4 class="text-white font-semibold mb-3">{i18n.t.contact.whyUsTitle}</h4>
 					<ul class="brand-y-2">
-						{#each ['Respon cepat (< 24 jam)', 'Konsultasi awal gratis', 'Tim berpengalaman 5+ tahun', 'Support pasca-deployment'] as item}
+						{#each i18n.t.contact.whyUsPoints as item}
 							<li class="flex items-center gap-2 text-sm text-slate-text">
 								<CheckCircle size={14} class="text-secondary flex-shrink-0" />
 								{item}
@@ -132,16 +138,17 @@
 							>
 								<CheckCircle size={32} class="text-secondary" />
 							</div>
-							<h3 class="text-white font-bold text-xl mb-2">Pesan Terkirim!</h3>
+							<h3 class="text-white font-bold text-xl mb-2">{i18n.t.contact.successTitle}</h3>
 							<p class="text-slate-text">
-								Tim kami akan menghubungi Anda dalam 1×24 jam. Terima kasih!
+								{i18n.t.contact.successDesc}
 							</p>
 							<button
 								onclick={() => {
 									isSubmitted = false;
 									formData = { name: '', email: '', subject: '', message: '' };
 								}}
-								class="mt-6 text-primary text-sm hover:underline">Kirim pesan lain</button
+								class="mt-6 text-primary text-sm hover:underline"
+								>{i18n.t.contact.sendAnother}</button
 							>
 						</div>
 					{:else}
@@ -150,7 +157,7 @@
 							<div class="grid sm:grid-cols-2 gap-4 mb-6">
 								<Input
 									id="contact-name"
-									label="Nama Lengkap *"
+									label={i18n.t.contact.formName}
 									type="text"
 									bind:value={formData.name}
 									required
@@ -158,7 +165,7 @@
 								/>
 								<Input
 									id="contact-email"
-									label="Email *"
+									label={i18n.t.contact.formEmail}
 									type="email"
 									bind:value={formData.email}
 									required
@@ -170,22 +177,22 @@
 							<div class="mb-6">
 								<Input
 									id="contact-subject"
-									label="Subjek"
+									label={i18n.t.contact.formSubject}
 									type="text"
 									bind:value={formData.subject}
-									placeholder="Apa yang ingin Anda diskusikan?"
+									placeholder={i18n.t.contact.formSubjectPlaceholder}
 								/>
 							</div>
 							<!-- Message -->
 							<div class="mb-6">
 								<Input
 									id="contact-message"
-									label="Pesan *"
+									label={i18n.t.contact.formMessage}
 									type="textarea"
 									bind:value={formData.message}
 									required
 									rows={5}
-									placeholder="Ceritakan proyek atau kebutuhan Anda..."
+									placeholder={i18n.t.contact.formMessagePlaceholder}
 								/>
 							</div>
 
@@ -201,10 +208,10 @@
 									<span
 										class="animate-spin w-4 h-4 border-2 border-brand-900/30 border-t-brand-900 rounded-full"
 									></span>
-									Mengirim...
+									{i18n.t.contact.btnSending}
 								{:else}
 									<Send size={16} />
-									Kirim Pesan
+									{i18n.t.contact.btnSubmit}
 								{/if}
 							</Button>
 						</form>

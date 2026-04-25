@@ -27,4 +27,3 @@
 <span class={computedClass}>
 	{@render children?.()}
 </span>
-

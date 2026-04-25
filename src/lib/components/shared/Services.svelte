@@ -10,6 +10,7 @@
 		Cpu,
 		ArrowRight
 	} from 'lucide-svelte';
+	import { i18n } from '$lib/stores/i18n.svelte';
 
 	// Map iconName string → Lucide component
 	const iconMap: Record<string, typeof Leaf> = {
@@ -22,8 +23,8 @@
 	};
 
 	const colorMap: Record<string, string> = {
-		'secondary': 'bg-secondary/10 text-secondary shadow-[0_0_20px_rgba(100, 142, 184,0.15)]',
-		'primary': 'bg-primary/10 text-primary shadow-[0_0_20px_rgba(207, 109, 70,0.15)]',
+		secondary: 'bg-secondary/10 text-secondary shadow-[0_0_20px_rgba(100, 142, 184,0.15)]',
+		primary: 'bg-primary/10 text-primary shadow-[0_0_20px_rgba(207, 109, 70,0.15)]',
 		'purple-400': 'bg-purple-500/10 text-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.15)]',
 		'yellow-400': 'bg-yellow-500/10 text-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.15)]'
 	};
@@ -31,23 +32,27 @@
 
 <section id="services" class="py-24 lg:py-32 relative bg-brand-800/30">
 	<!-- Top separator line -->
-	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+	<div
+		class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"
+	></div>
 	<!-- Bottom separator line -->
-	<div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+	<div
+		class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"
+	></div>
 
 	<div class="container-max section-padding">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase">
-				Layanan Kami
+			<span
+				class="inline-block px-4 py-1.5 rounded-full text-xs font-mono text-secondary border border-secondary/30 bg-secondary/5 mb-4 tracking-widest uppercase"
+			>
+				{i18n.t.services.badge}
 			</span>
 			<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
-				Solusi Teknologi<br />
-				<span class="gradient-text">Untuk Setiap Industri</span>
+				{@html i18n.t.services.title}
 			</h2>
 			<p class="text-slate-text text-lg max-w-2xl mx-auto leading-relaxed">
-				Kami menghadirkan teknologi yang adaptif dan terukur, dirancang khusus untuk menjawab
-				tantangan unik di setiap sektor bisnis.
+				{i18n.t.services.desc}
 			</p>
 		</div>
 
@@ -57,29 +62,37 @@
 				{@const IconComponent = iconMap[service.iconName]}
 				{@const colorClass = colorMap[service.color ?? 'primary']}
 
-				<Card
-					class="p-7 group cursor-pointer"
-					hoverable
-				>
+				<Card class="p-7 group cursor-pointer" hoverable>
 					<!-- Icon -->
-					<div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${colorClass} group-hover:scale-110 transition-transform duration-300`}>
+					<div
+						class={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${colorClass} group-hover:scale-110 transition-transform duration-300`}
+					>
 						<IconComponent size={22} />
 					</div>
 
 					<!-- Title -->
-					<h3 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors duration-300">
-						{service.title}
+					<h3
+						class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors duration-300"
+					>
+						{i18n.locale === 'en' && service.title_en ? service.title_en : service.title}
 					</h3>
 
 					<!-- Description -->
 					<p class="text-slate-text text-sm leading-relaxed mb-4">
-						{service.description}
+						{i18n.locale === 'en' && service.description_en
+							? service.description_en
+							: service.description}
 					</p>
 
 					<!-- Learn More link -->
-					<div class="flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors duration-300">
-						<span class="font-medium">Pelajari lebih lanjut</span>
-						<ArrowRight size={14} class="group-hover:translate-x-1 transition-transform duration-300" />
+					<div
+						class="flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors duration-300"
+					>
+						<span class="font-medium">{i18n.t.common.learnMore}</span>
+						<ArrowRight
+							size={14}
+							class="group-hover:translate-x-1 transition-transform duration-300"
+						/>
 					</div>
 				</Card>
 			{/each}
